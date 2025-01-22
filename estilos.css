@@ -37,7 +37,7 @@ header span {
     gap: 5px;
     width: 60%;
     max-width: 80px;
-    margin-top: 20px; /* Espacio entre la cabecera y la cuadrícula */
+    margin-top: 10px; /* Espacio entre la cabecera y la cuadrícula */
 }
 
 .grid-item {
