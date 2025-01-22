@@ -1,4 +1,5 @@
 
+
 /* estilos.css */
 
 /* Estilos generales */
@@ -7,11 +8,12 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Añadimos un layout en columna */
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     height: 100vh;
     background-color: #81C784; /* Fondo verde más oscuro */
+    overflow: hidden; /* Evita el scroll si no es necesario */
 }
 
 /* Estilos de la cabecera */
@@ -31,19 +33,23 @@ header span {
     color: #333; /* Color oscuro para el texto */
 }
 
+/* Estilos para el contenedor de la cuadrícula */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columnas por defecto */
     grid-template-rows: repeat(4, 1fr); /* 4 filas por defecto */
     gap: 10px;
-    width: 80%;
-    max-width: 800px;
+    width: 100%; /* Asegura que ocupe todo el espacio disponible */
+    max-width: 800px; /* Limita el tamaño máximo */
+    margin: 0 auto; /* Centra el contenedor */
     margin-top: 20px; /* Espacio entre la cabecera y la cuadrícula */
+    justify-items: center; /* Centra los ítems dentro de la cuadrícula */
 }
 
+/* Estilos de los elementos dentro de la cuadrícula */
 .grid-item {
-    background-color: white; /* Fondo blanco para los botones */
-    color: #333; /* Color de texto oscuro */
+    background-color: #c8e6c9; /* Verde muy claro */
+    color: #333; /* Texto oscuro para buen contraste */
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -51,28 +57,46 @@ header span {
     flex-direction: column; /* Organiza el contenido de forma vertical */
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    box-sizing: border-box; /* Hace que el padding no afecte el tamaño del cuadrado */
+    padding: 8px; /* Reducido el padding */
+    box-sizing: border-box;
+    margin: 10px; /* Reducido el margen */
+    width: 180px; /* Reducido el ancho de las casillas */
+    max-width: 100%; /* Asegura que no se exceda del contenedor */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efectos al pasar el mouse */
 }
 
-/* Aseguramos que el enlace también tenga el mismo estilo flex */
+/* Estilo para el enlace dentro del grid-item */
 .grid-item a {
-    display: flex;          /* Hace que el enlace sea un contenedor flex */
-    flex-direction: column; /* Organiza el contenido de forma vertical */
-    justify-content: center; /* Centra el contenido verticalmente */
-    align-items: center;    /* Centra el contenido horizontalmente */
-    text-decoration: none;  /* Elimina el subrayado del enlace */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /* Elimina el subrayado del enlace */
 }
 
+/* Estilo para las imágenes dentro de los grid-items */
 .grid-item img {
-    width: 70%;  /* Ajusta el tamaño de las imágenes sin hacerlas demasiado grandes */
+    width: 70%; /* Ajusta el tamaño de las imágenes */
     height: auto; /* Mantiene la proporción de la imagen */
-    object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin deformarse */
+    object-fit: contain;
 }
 
+/* Estilo para el texto dentro del grid-item */
 .grid-item span {
-    margin-top: 10px; /* Espacio entre la imagen y el texto */
-    font-size: 1rem;
+    margin-top: 10px;
+    font-size: 0.9rem; /* Reducido el tamaño de la fuente */
+}
+
+/* Efecto de hover para los grid-item */
+.grid-item:hover {
+    background-color: #a5d6a7; /* Verde más oscuro al pasar el mouse */
+    cursor: pointer;
+    transform: scale(1.05); /* Hace que el botón se haga ligeramente más grande */
+}
+
+/* Estilos para el texto del enlace cuando se pasa el ratón */
+.grid-item a:hover span {
+    color: #fff; /* Cambia el color del texto a blanco cuando se pasa el ratón */
 }
 
 /* Media Query para dispositivos más grandes */
@@ -81,50 +105,4 @@ header span {
         grid-template-columns: repeat(4, 1fr); /* 4 columnas */
         grid-template-rows: repeat(2, 1fr); /* 2 filas */
     }
-}
-/* Estilo general para el contenedor de los botones */
-.grid-container-general {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los botones se ajusten cuando se llegue al borde */
-    justify-content: center; /* Centra los botones en la página */
-    padding: 20px;
-}
-
-/* Fondo verde claro para los botones */
-.grid-item {
-    background-color: #c8e6c9; /* Verde muy claro */
-    color: #333; /* Texto oscuro para buen contraste */
-    padding: 20px; /* Espaciado dentro de cada botón */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para los botones */
-    text-align: center;
-    margin: 15px; /* Espacio entre los botones */
-    width: 220px; /* Aumentamos el ancho de los botones */
-    max-width: 100%; /* Asegura que no se exceda del contenedor */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Efectos al pasar el mouse */
-}
-
-/* Aumentar el tamaño de la fuente de los enlaces */
-.grid-item a span {
-    font-size: 1.5rem; /* Ajusta el tamaño de la fuente */
-    font-weight: bold; /* Pone el texto en negrita */
-    color: #333; /* Asegura que el texto tenga buen contraste */
-    text-decoration: none; /* Elimina subrayado del enlace */
-}
-
-/* Efecto cuando el mouse pasa sobre el botón */
-.grid-item:hover {
-    background-color: #a5d6a7; /* Verde más oscuro al pasar el mouse */
-    cursor: pointer;
-    transform: scale(1.05); /* Hace que el botón se haga ligeramente más grande */
-}
-
-/* Evitar que el enlace tenga subrayado */
-.grid-item a {
-    text-decoration: none; /* Elimina subrayado del enlace */
-}
-
-/* Estilos para el texto del enlace cuando se pasa el ratón */
-.grid-item a:hover span {
-    color: #fff; /* Cambia el color del texto a blanco cuando se pasa el ratón */
 }
