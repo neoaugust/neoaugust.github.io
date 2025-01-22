@@ -1,3 +1,4 @@
+
 /* estilos.css */
 
 /* Estilos generales */
@@ -31,18 +32,14 @@ header span {
 }
 
 .grid-container {
-    /*display: grid;
+    display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columnas por defecto */
     grid-template-rows: repeat(4, 1fr); /* 4 filas por defecto */
-    gap: 5px;
-    width: 60%;
-    max-width: 80px;
-    margin-top: 10px;*/ /* Espacio entre la cabecera y la cuadrícula */
- display: flex;
     flex-wrap: wrap; /* Permite que los botones se ajusten cuando se llegue al borde */
     justify-content: center; /* Centra los botones en la página */
-    padding: 20px;
-
+    padding: 10px;
+    
+    /* Espacio entre la cabecera y la cuadrícula */
 }
 
 .grid-item {
@@ -69,7 +66,7 @@ header span {
 }
 
 .grid-item img {
-    width: 60%;  /* Ajusta el tamaño de las imágenes sin hacerlas demasiado grandes */
+    width: 50%;  /* Ajusta el tamaño de las imágenes sin hacerlas demasiado grandes */
     height: auto; /* Mantiene la proporción de la imagen */
     object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin deformarse */
 }
@@ -87,7 +84,7 @@ header span {
     }
 }
 /* Estilo general para el contenedor de los botones */
-.grid-container-general{
+.grid-container-general {
     display: flex;
     flex-wrap: wrap; /* Permite que los botones se ajusten cuando se llegue al borde */
     justify-content: center; /* Centra los botones en la página */
@@ -103,8 +100,8 @@ header span {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para los botones */
     text-align: center;
     margin: 15px; /* Espacio entre los botones */
-    width: 220px; /* Aumentamos el ancho de los botones */
-    max-width: 100%; /* Asegura que no se exceda del contenedor */
+    width: 180px; /* Aumentamos el ancho de los botones */
+    max-width: 80%; /* Asegura que no se exceda del contenedor */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Efectos al pasar el mouse */
 }
 
