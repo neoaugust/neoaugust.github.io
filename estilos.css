@@ -1,0 +1,130 @@
+
+/* estilos.css */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Añadimos un layout en columna */
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background-color: #81C784; /* Fondo verde más oscuro */
+}
+
+/* Estilos de la cabecera */
+header {
+    width: 100%;
+    background-color: #b5d5bd; /* Fondo blanco para la cabecera */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header span {
+    font-size: 2rem; /* Aumenta el tamaño del texto */
+    font-weight: bold; /* Pone el texto en negrita */
+    color: #333; /* Color oscuro para el texto */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas por defecto */
+    grid-template-rows: repeat(4, 1fr); /* 4 filas por defecto */
+    gap: 10px;
+    width: 80%;
+    max-width: 800px;
+    margin-top: 20px; /* Espacio entre la cabecera y la cuadrícula */
+}
+
+.grid-item {
+    background-color: white; /* Fondo blanco para los botones */
+    color: #333; /* Color de texto oscuro */
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Organiza el contenido de forma vertical */
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box; /* Hace que el padding no afecte el tamaño del cuadrado */
+}
+
+/* Aseguramos que el enlace también tenga el mismo estilo flex */
+.grid-item a {
+    display: flex;          /* Hace que el enlace sea un contenedor flex */
+    flex-direction: column; /* Organiza el contenido de forma vertical */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center;    /* Centra el contenido horizontalmente */
+    text-decoration: none;  /* Elimina el subrayado del enlace */
+}
+
+.grid-item img {
+    width: 70%;  /* Ajusta el tamaño de las imágenes sin hacerlas demasiado grandes */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin deformarse */
+}
+
+.grid-item span {
+    margin-top: 10px; /* Espacio entre la imagen y el texto */
+    font-size: 1rem;
+}
+
+/* Media Query para dispositivos más grandes */
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+        grid-template-rows: repeat(2, 1fr); /* 2 filas */
+    }
+}
+/* Estilo general para el contenedor de los botones */
+.grid-container-general {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los botones se ajusten cuando se llegue al borde */
+    justify-content: center; /* Centra los botones en la página */
+    padding: 20px;
+}
+
+/* Fondo verde claro para los botones */
+.grid-item {
+    background-color: #c8e6c9; /* Verde muy claro */
+    color: #333; /* Texto oscuro para buen contraste */
+    padding: 20px; /* Espaciado dentro de cada botón */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para los botones */
+    text-align: center;
+    margin: 15px; /* Espacio entre los botones */
+    width: 220px; /* Aumentamos el ancho de los botones */
+    max-width: 100%; /* Asegura que no se exceda del contenedor */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efectos al pasar el mouse */
+}
+
+/* Aumentar el tamaño de la fuente de los enlaces */
+.grid-item a span {
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente */
+    font-weight: bold; /* Pone el texto en negrita */
+    color: #333; /* Asegura que el texto tenga buen contraste */
+    text-decoration: none; /* Elimina subrayado del enlace */
+}
+
+/* Efecto cuando el mouse pasa sobre el botón */
+.grid-item:hover {
+    background-color: #a5d6a7; /* Verde más oscuro al pasar el mouse */
+    cursor: pointer;
+    transform: scale(1.05); /* Hace que el botón se haga ligeramente más grande */
+}
+
+/* Evitar que el enlace tenga subrayado */
+.grid-item a {
+    text-decoration: none; /* Elimina subrayado del enlace */
+}
+
+/* Estilos para el texto del enlace cuando se pasa el ratón */
+.grid-item a:hover span {
+    color: #fff; /* Cambia el color del texto a blanco cuando se pasa el ratón */
+}
