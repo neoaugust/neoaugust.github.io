@@ -31,13 +31,18 @@ header span {
 }
 
 .grid-container {
-    display: grid;
+    /*display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columnas por defecto */
     grid-template-rows: repeat(4, 1fr); /* 4 filas por defecto */
     gap: 5px;
     width: 60%;
     max-width: 80px;
-    margin-top: 10px; /* Espacio entre la cabecera y la cuadrícula */
+    margin-top: 10px;*/ /* Espacio entre la cabecera y la cuadrícula */
+ display: flex;
+    flex-wrap: wrap; /* Permite que los botones se ajusten cuando se llegue al borde */
+    justify-content: center; /* Centra los botones en la página */
+    padding: 20px;
+
 }
 
 .grid-item {
