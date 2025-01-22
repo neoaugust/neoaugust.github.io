@@ -34,7 +34,7 @@ header span {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columnas por defecto */
     grid-template-rows: repeat(4, 1fr); /* 4 filas por defecto */
-    gap: 10px;
+    gap: 5px;
     width: 60%;
     max-width: 80px;
     margin-top: 20px; /* Espacio entre la cabecera y la cuadrícula */
