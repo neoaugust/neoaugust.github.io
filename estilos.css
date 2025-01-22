@@ -64,7 +64,7 @@ header span {
 }
 
 .grid-item img {
-    width: 70%;  /* Ajusta el tamaño de las imágenes sin hacerlas demasiado grandes */
+    width: 60%;  /* Ajusta el tamaño de las imágenes sin hacerlas demasiado grandes */
     height: auto; /* Mantiene la proporción de la imagen */
     object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin deformarse */
 }
