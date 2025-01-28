@@ -99,7 +99,7 @@ header span {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para los botones */
     text-align: center;
     margin: 20px; /*Espacio entre los botones */
-    width: 150px; /* Aumentamos el ancho de los botones */
+    width: 180px; /* Aumentamos el ancho de los botones */
     max-width: 80%; /* Asegura que no se exceda del contenedor */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Efectos al pasar el mouse */
 }
